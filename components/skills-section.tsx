@@ -14,6 +14,8 @@ import { IoLogoJavascript } from "react-icons/io";
 import { BiLogoTypescript } from "react-icons/bi";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiExpress, SiMongodb } from "react-icons/si";
+import { DiMsqlServer } from "react-icons/di";
+
 
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -31,6 +33,7 @@ const skills = {
         { name: "Node.js", color: "#39D353", hover: "#6EEB83" }, // Neon green
         { name: "Express", color: "#FFFFFF", hover: "#E0E0E0" }, // White glow
         { name: "MongoDB", color: "#47A248", hover: "#6EEB83" }, // Neon green
+        { name: "SQL Server", color: "#CC292B", hover: "#FF5252" } // Microsoft Red
     ],
     tools: [
         { name: "Git", color: "#E84D31", hover: "#FF8C8C" }, // Bright red
@@ -54,6 +57,7 @@ function TechIcon({ name, color }: { name: string; color: string }) {
             <RiTailwindCssFill className="w-full h-full" style={{ color }} />
         ),
         "Node.js": <FaNodeJs className="w-full h-full" style={{ color }} />,
+        "SQL Server": <DiMsqlServer className="w-full h-full" style={{ color }} />,
         Express: <SiExpress className="w-full h-full" style={{ color }} />,
         MongoDB: <SiMongodb className="w-full h-full" style={{ color }} />,
         Git: <FaGitAlt className="w-full h-full" style={{ color }} />,

@@ -7,6 +7,19 @@ import { cn } from "@/lib/utils";
 const projects = [
     {
         id: 1,
+        name: "Nexus Academy",
+        codename: "OPERATION: MANAGER",
+        objective:
+            "A modern Learning Management System (LMS) designed to deliver structured online courses, manage instructors and students, and track learning progress.",
+        tech: ["React.js", "Tailwind CSS", "Express.js", "SQL Server"],
+        difficulty: 5,
+        status: "COMPLETED",
+        xp: 4000,
+        github: "https://github.com/Abdelrahman0xFF/nexus-academy",
+        live: "https://nexus-academy-ashy.vercel.app/",
+    },
+    {
+        id: 2,
         name: "MovieGo",
         codename: "OPERATION: STOREFRONT",
         objective:
@@ -19,7 +32,7 @@ const projects = [
         live: "https://movie-go-flame.vercel.app/",
     },
     {
-        id: 2,
+        id: 3,
         name: "SpaceX",
         codename: "MISSION: CONNECT",
         objective:
@@ -27,12 +40,12 @@ const projects = [
         tech: ["React.js", "Xano API", "Bootstrap", "Vercel", "TypeScript"],
         difficulty: 5,
         status: "COMPLETED",
-        xp: 1800,
+        xp: 3000,
         github: "https://github.com/abdelrahman0xff/Workspace",
         live: "https://workspace-alpha-sage.vercel.app/",
     },
     {
-        id: 3,
+        id: 4,
         name: "FlavorFinds",
         codename: "PROJECT: TASKMASTER",
         objective:
@@ -40,12 +53,12 @@ const projects = [
         tech: ["HTML5", "CSS3", "Bootstrap"],
         difficulty: 3,
         status: "COMPLETED",
-        xp: 1500,
+        xp: 1200,
         github: "https://github.com/abdelrahman0xff/FlavorFinds",
         live: "https://abdelrahman0xff.github.io/FlavorFinds/",
     },
     {
-        id: 4,
+        id: 5,
         name: "Portfolio",
         codename: "OPERATION: NEURAL",
         objective:
@@ -53,7 +66,7 @@ const projects = [
         tech: ["HTML5", "CSS3", "JavaScript"],
         difficulty: 2,
         status: "COMPLETED",
-        xp: 3000,
+        xp: 1000,
         github: "https://github.com/abdelrahman0xff/portfolio",
         live: "https://abdelrahman0xff.github.io/portfolio/",
     },
