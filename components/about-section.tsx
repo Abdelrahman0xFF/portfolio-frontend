@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Gamepad2, Code, Coffee, Zap } from "lucide-react";
 
 const traits = [
@@ -56,10 +57,10 @@ export function AboutSection() {
                                 {/* Silhouette placeholder */}
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <div className="text-8xl opacity-50">
-                                        <img
+                                        <Image
                                             src="/3atef.jpg"
-                                            alt="Avatar"
-                                            className="rounded-full"
+                                            alt="Abdelrahman Asharf - Full-Stack Developer"
+                                            className="rounded-full object-cover"
                                             width={128}
                                             height={128}
                                         />
@@ -81,13 +82,12 @@ export function AboutSection() {
                                 BACKSTORY
                             </h3>
                             <p className="text-foreground leading-relaxed">
-                                I'm a passionate web developer with a knack for
-                                crafting clean, efficient code. My journey began
+                                I'm a Software Engineer based in Hurghada, Egypt,
+                                with a knack for crafting clean, efficient code.
+                                Currently pursuing my degree in Computer Engineering
+                                at Helwan University, my journey began
                                 with a love for gaming, which sparked my
-                                interest in technology and problem solving. Over
-                                the years, I've honed my skills in various web
-                                technologies, always striving to create seamless
-                                user experiences.
+                                interest in technology and problem solving.
                             </p>
                             <p className="text-muted-foreground mt-4 leading-relaxed">
                                 When I'm not coding, you'll find me immersed in

@@ -1,27 +1,52 @@
-"use client";
+import { HomeContent } from "@/components/home-content";
+import type { Metadata } from "next";
 
-import { HeroSection } from "@/components/hero-section";
-import { GameNavigation } from "@/components/game-navigation";
-import { ProjectsSection } from "@/components/projects-section";
-import { SkillsSection } from "@/components/skills-section";
-import { ExperienceSection } from "@/components/experience-section";
-import { AboutSection } from "@/components/about-section";
-import { ContactSection } from "@/components/contact-section";
-import useHasMouse from "@/hooks/use-has-mouse";
-import Cursor from "@/components/ui/cursor";
+export const metadata: Metadata = {
+    title: "Abdelrahman Asharf | Full-Stack Developer & Game Enthusiast",
+    description:
+        "Portfolio of Abdelrahman Asharf, a Software Engineer from Hurghada, Egypt. Specializing in Computer Engineering at Helwan University and building clean, scalable, high-performance web applications.",
+    keywords: [
+        "Abdelrahman Asharf",
+        "Software Engineer Hurghada",
+        "Computer Engineering Helwan University",
+        "Full-Stack Developer Egypt",
+        "Web Developer Hurghada",
+        "React Developer Egypt",
+        "Next.js Portfolio",
+        "Software Engineer",
+        "Clean Code",
+        "UI/UX Design",
+    ],
+    authors: [{ name: "Abdelrahman Asharf" }],
+    openGraph: {
+        title: "Abdelrahman Asharf | Full-Stack Developer Portfolio",
+        description:
+            "Explore the work and skills of Abdelrahman Asharf, a passionate Full-Stack Developer.",
+        url: "https://abdelrahmanashraf.dev",
+        siteName: "Abdelrahman Asharf Portfolio",
+        images: [
+            {
+                url: "/3atef.jpg",
+                width: 800,
+                height: 800,
+                alt: "Abdelrahman Asharf",
+            },
+        ],
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Abdelrahman Asharf | Full-Stack Developer Portfolio",
+        description:
+            "Explore the work and skills of Abdelrahman Asharf, a passionate Full-Stack Developer.",
+        images: ["/3atef.jpg"],
+    },
+    alternates: {
+        canonical: "https://abdelrahmanashraf.dev",
+    },
+};
 
 export default function Home() {
-    const hasMouse = useHasMouse();
-    return (
-        <main className="relative min-h-screen bg-background overflow-x-hidden ">
-            {hasMouse && <Cursor />}
-            <GameNavigation />
-            <HeroSection />
-            <ProjectsSection />
-            <SkillsSection />
-            <ExperienceSection />
-            <AboutSection />
-            <ContactSection />
-        </main>
-    );
+    return <HomeContent />;
 }

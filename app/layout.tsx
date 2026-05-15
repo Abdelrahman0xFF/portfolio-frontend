@@ -2,7 +2,7 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Rajdhani, Share_Tech_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import "./globals.css";
+import "@/app/globals.css";
 
 const _rajdhani = Rajdhani({
     subsets: ["latin"],
@@ -15,9 +15,20 @@ const _shareTechMono = Share_Tech_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Abdelrahman | Software Engineer",
+    metadataBase: new URL("https://abdelrahmanashraf.dev"),
+    title: {
+        default: "Abdelrahman Asharf | Software Engineer",
+        template: "%s | Abdelrahman Asharf",
+    },
+    description: "Software Engineer from Hurghada, Egypt, specializing in modern web technologies and Computer Engineering at Helwan University.",
     icons: {
-        icon: "/favicon.png",
+        icon: [
+            { url: "/favicon.png" },
+            { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
+            { url: "/icon-dark-32x32.png", media: "(prefers-color-scheme: dark)" },
+        ],
+        shortcut: "/favicon.png",
+        apple: "/apple-icon.png",
     },
 };
 
@@ -26,9 +37,37 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "Abdelrahman Asharf",
+        url: "https://abdelrahmanashraf.dev",
+        jobTitle: "Software Engineer",
+        address: {
+            "@type": "PostalAddress",
+            "addressLocality": "Hurghada",
+            "addressRegion": "Red Sea",
+            "addressCountry": "Egypt"
+        },
+        alumniOf: {
+            "@type": "CollegeOrUniversity",
+            "name": "Faculty of Engineering, Helwan University",
+            "alternateName": "Helwan Engineering"
+        },
+        sameAs: [
+            "https://github.com/Abdelrahman0xFF",
+            "https://www.linkedin.com/in/abdelrahman-ashraf-fathey",
+        ],
+        description: "Software Engineer from Hurghada, Egypt. Currently studying Computer Engineering at Helwan University and specializing in building high-performance web applications.",
+    };
+
     return (
         <html lang="en" className="dark">
             <body className="font-sans antialiased">
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
                 {children}
                 <Analytics />
             </body>
