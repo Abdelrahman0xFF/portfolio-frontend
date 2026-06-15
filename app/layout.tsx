@@ -17,15 +17,22 @@ const _shareTechMono = Share_Tech_Mono({
 export const metadata: Metadata = {
     metadataBase: new URL("https://abdelrahmanashraf.dev"),
     title: {
-        default: "Abdelrahman Asharf | Software Engineer",
-        template: "%s | Abdelrahman Asharf",
+        default: "Abdelrahman Ashraf | Software Engineer",
+        template: "%s | Abdelrahman Ashraf",
     },
-    description: "Software Engineer from Hurghada, Egypt, specializing in modern web technologies and Computer Engineering at Helwan University.",
+    description:
+        "Software Engineer from Hurghada, Egypt, specializing in modern web technologies and Computer Engineering at Helwan University.",
     icons: {
         icon: [
             { url: "/favicon.png" },
-            { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
-            { url: "/icon-dark-32x32.png", media: "(prefers-color-scheme: dark)" },
+            {
+                url: "/icon-light-32x32.png",
+                media: "(prefers-color-scheme: light)",
+            },
+            {
+                url: "/icon-dark-32x32.png",
+                media: "(prefers-color-scheme: dark)",
+            },
         ],
         shortcut: "/favicon.png",
         apple: "/apple-icon.png",
@@ -40,25 +47,26 @@ export default function RootLayout({
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "Person",
-        name: "Abdelrahman Asharf",
+        name: "Abdelrahman Ashraf",
         url: "https://abdelrahmanashraf.dev",
         jobTitle: "Software Engineer",
         address: {
             "@type": "PostalAddress",
-            "addressLocality": "Hurghada",
-            "addressRegion": "Red Sea",
-            "addressCountry": "Egypt"
+            addressLocality: "Hurghada",
+            addressRegion: "Red Sea",
+            addressCountry: "Egypt",
         },
         alumniOf: {
             "@type": "CollegeOrUniversity",
-            "name": "Faculty of Engineering, Helwan University",
-            "alternateName": "Helwan Engineering"
+            name: "Faculty of Engineering, Helwan University",
+            alternateName: "Helwan Engineering",
         },
         sameAs: [
             "https://github.com/Abdelrahman0xFF",
             "https://www.linkedin.com/in/abdelrahman-ashraf-fathey",
         ],
-        description: "Software Engineer from Hurghada, Egypt. Currently studying Computer Engineering at Helwan University and specializing in building high-performance web applications.",
+        description:
+            "Software Engineer from Hurghada, Egypt. Currently studying Computer Engineering at Helwan University and specializing in building high-performance web applications.",
     };
 
     return (

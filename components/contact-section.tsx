@@ -308,7 +308,7 @@ export function ContactSection() {
                         suppressHydrationWarning
                     >
                         {new Date().getFullYear()} • Built with Abdelrahman
-                        Asharf
+                        Ashraf
                     </p>
                     <p className="font-mono text-xs text-muted-foreground/50 mt-2">
                         Inspired by open-world games • All missions available

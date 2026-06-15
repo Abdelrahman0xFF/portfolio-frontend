@@ -75,7 +75,7 @@ export function HeroSection() {
                 {/* Character info */}
                 <div className="space-y-4 mb-8">
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground tracking-tight">
-                        Abdelrahman Asharf
+                        Abdelrahman Ashraf
                     </h1>
                     <div className="flex items-center justify-center gap-4 text-muted-foreground font-mono">
                         <span className="text-primary">CLASS:</span>

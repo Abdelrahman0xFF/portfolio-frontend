@@ -59,7 +59,7 @@ export function AboutSection() {
                                     <div className="text-8xl opacity-50">
                                         <Image
                                             src="/3atef.jpg"
-                                            alt="Abdelrahman Asharf - Full-Stack Developer"
+                                            alt="Abdelrahman Ashraf - Full-Stack Developer"
                                             className="rounded-full object-cover"
                                             width={128}
                                             height={128}
@@ -82,12 +82,13 @@ export function AboutSection() {
                                 BACKSTORY
                             </h3>
                             <p className="text-foreground leading-relaxed">
-                                I'm a Software Engineer based in Hurghada, Egypt,
-                                with a knack for crafting clean, efficient code.
-                                Currently pursuing my degree in Computer Engineering
-                                at Helwan University, my journey began
-                                with a love for gaming, which sparked my
-                                interest in technology and problem solving.
+                                I'm a Software Engineer based in Hurghada,
+                                Egypt, with a knack for crafting clean,
+                                efficient code. Currently pursuing my degree in
+                                Computer Engineering at Helwan University, my
+                                journey began with a love for gaming, which
+                                sparked my interest in technology and problem
+                                solving.
                             </p>
                             <p className="text-muted-foreground mt-4 leading-relaxed">
                                 When I'm not coding, you'll find me immersed in
