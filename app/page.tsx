@@ -2,11 +2,11 @@ import { HomeContent } from "@/components/home-content";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Abdelrahman Asharf",
+    title: "Abdelrahman Ashraf",
     description:
-        "Portfolio of Abdelrahman Asharf, a Software Engineer from Hurghada, Egypt. Specializing in Computer Engineering at Helwan University and building clean, scalable, high-performance web applications.",
+        "Portfolio of Abdelrahman Ashraf, a Software Engineer from Hurghada, Egypt. Specializing in Computer Engineering at Helwan University and building clean, scalable, high-performance web applications.",
     keywords: [
-        "Abdelrahman Asharf",
+        "Abdelrahman Ashraf",
         "Software Engineer Hurghada",
         "Computer Engineering Helwan University",
         "Full-Stack Developer Egypt",
@@ -17,19 +17,19 @@ export const metadata: Metadata = {
         "Clean Code",
         "UI/UX Design",
     ],
-    authors: [{ name: "Abdelrahman Asharf" }],
+    authors: [{ name: "Abdelrahman Ashraf" }],
     openGraph: {
-        title: "Abdelrahman Asharf",
+        title: "Abdelrahman Ashraf",
         description:
-            "Explore the work and skills of Abdelrahman Asharf, a passionate Full-Stack Developer.",
+            "Explore the work and skills of Abdelrahman Ashraf, a passionate Full-Stack Developer.",
         url: "https://abdelrahmanashraf.dev",
-        siteName: "Abdelrahman Asharf Portfolio",
+        siteName: "Abdelrahman Ashraf Portfolio",
         images: [
             {
                 url: "/3atef.jpg",
                 width: 800,
                 height: 800,
-                alt: "Abdelrahman Asharf",
+                alt: "Abdelrahman Ashraf",
             },
         ],
         locale: "en_US",
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Abdelrahman Asharf",
+        title: "Abdelrahman Ashraf",
         description:
-            "Explore the work and skills of Abdelrahman Asharf, a passionate Full-Stack Developer.",
+            "Explore the work and skills of Abdelrahman Ashraf, a passionate Full-Stack Developer.",
         images: ["/3atef.jpg"],
     },
     alternates: {
