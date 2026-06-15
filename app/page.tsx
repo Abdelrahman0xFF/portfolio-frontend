@@ -2,7 +2,7 @@ import { HomeContent } from "@/components/home-content";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Abdelrahman Asharf | Full-Stack Developer & Game Enthusiast",
+    title: "Abdelrahman Asharf",
     description:
         "Portfolio of Abdelrahman Asharf, a Software Engineer from Hurghada, Egypt. Specializing in Computer Engineering at Helwan University and building clean, scalable, high-performance web applications.",
     keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     ],
     authors: [{ name: "Abdelrahman Asharf" }],
     openGraph: {
-        title: "Abdelrahman Asharf | Full-Stack Developer Portfolio",
+        title: "Abdelrahman Asharf",
         description:
             "Explore the work and skills of Abdelrahman Asharf, a passionate Full-Stack Developer.",
         url: "https://abdelrahmanashraf.dev",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Abdelrahman Asharf | Full-Stack Developer Portfolio",
+        title: "Abdelrahman Asharf",
         description:
             "Explore the work and skills of Abdelrahman Asharf, a passionate Full-Stack Developer.",
         images: ["/3atef.jpg"],
