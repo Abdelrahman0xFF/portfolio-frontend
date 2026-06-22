@@ -6,10 +6,10 @@ import { useState } from "react";
 import { Send, Mail, CheckCircle, Terminal } from "lucide-react";
 import { SiReaddotcv } from "react-icons/si";
 import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { sendMessage } from "@/services/messagesApi";
-import { isAxiosError } from "axios";
+import { sendMessage } from "@/services/messages";
 
 export function ContactSection() {
     const [formState, setFormState] = useState({
@@ -38,46 +38,19 @@ export function ContactSection() {
             await sendMessage(formState);
             setTerminalLines((prev) => [
                 ...prev,
-                "> Message encrypted...",
+                "> Message stored in MongoDB cluster...",
                 "> Transmission complete!",
             ]);
             setIsSubmitted(true);
             setFormState({ name: "", email: "", message: "" });
-            setIsSubmitting(false); // Reset submitting state
         } catch (error) {
-            if (isAxiosError(error)) {
-                if (error.response) {
-                    const status = error.response.status;
-                    const errorData = error.response.data;
-                    setTerminalLines((prev) => [
-                        ...prev,
-                        `> Error: Transmission failed. Server responded with status ${status}.`,
-                        typeof errorData === "string"
-                            ? `> ${errorData}`
-                            : errorData && typeof errorData === "object"
-                              ? `> ${JSON.stringify(errorData)}`
-                              : "> Could not parse error response.",
-                    ]);
-                } else if (error.request) {
-                    setTerminalLines((prev) => [
-                        ...prev,
-                        "> Error: Network connection failed. No response from server.",
-                    ]);
-                } else {
-                    setTerminalLines((prev) => [
-                        ...prev,
-                        "> Error: Could not send transmission.",
-                        `> ${error.message}`,
-                    ]);
-                }
-            } else {
-                setTerminalLines((prev) => [
-                    ...prev,
-                    "> Error: An unknown error occurred.",
-                    error instanceof Error ? `> ${error.message}` : "",
-                ]);
-            }
-            setIsSubmitting(false); // Allow user to try again
+            setTerminalLines((prev) => [
+                ...prev,
+                "> Error: Could not store transmission.",
+                error instanceof Error ? `> ${error.message}` : "",
+            ]);
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -186,6 +159,16 @@ export function ContactSection() {
                                     />
                                 </a>
                             ))}
+                        </div>
+
+                        <div className="mt-6 flex justify-center">
+                            <Link
+                                href="/messages"
+                                className="inline-flex items-center gap-2 rounded-lg border border-primary/30 bg-primary/10 px-4 py-2 font-mono text-sm text-primary transition-colors hover:bg-primary/20"
+                            >
+                                <Mail className="w-4 h-4" />
+                                View Sent Messages
+                            </Link>
                         </div>
                     </div>
 

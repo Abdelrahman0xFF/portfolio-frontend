@@ -1,7 +1,10 @@
-interface Message {
+export interface MessageFormData {
     email: string;
     name: string;
     message: string;
 }
 
-export type MessageFormData = Message;
+export interface StoredMessage extends MessageFormData {
+    id: string;
+    createdAt: string;
+}
