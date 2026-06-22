@@ -2,6 +2,7 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Rajdhani, Share_Tech_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { SiteCursor } from "@/components/site-cursor";
 import "@/app/globals.css";
 
 const _rajdhani = Rajdhani({
@@ -76,6 +77,7 @@ export default function RootLayout({
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
+                <SiteCursor />
                 {children}
                 <Analytics />
             </body>
