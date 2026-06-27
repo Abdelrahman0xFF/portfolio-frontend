@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         "Software Engineer from Hurghada, Egypt, specializing in modern web technologies and Computer Engineering at Helwan University.",
     icons: {
         icon: [
-            { url: "/favicon.png" },
+            { url: "/3atef.jpg" },
             {
                 url: "/icon-light-32x32.png",
                 media: "(prefers-color-scheme: light)",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
                 media: "(prefers-color-scheme: dark)",
             },
         ],
-        shortcut: "/favicon.png",
+        shortcut: "/3atef.jpg",
         apple: "/apple-icon.png",
     },
 };
