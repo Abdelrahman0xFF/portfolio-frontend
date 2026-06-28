@@ -24,7 +24,14 @@ const projects = [
         codename: "PROJECT: BREWMASTER",
         objective:
             "Web and Windowns application for a coffee shop, enabling customers to browse the menu, place orders, and make payments.",
-        tech: ["React.js", "Electron.js", "sqlite3", "Tailwind CSS"],
+        tech: [
+            "React.js",
+            "Express.js",
+            "Supabase",
+            "Electron.js",
+            "sqlite3",
+            "Tailwind CSS",
+        ],
         difficulty: 5,
         status: "IN PROGRESS",
         xp: 5000,
