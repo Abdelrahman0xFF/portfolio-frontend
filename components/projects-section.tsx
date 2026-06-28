@@ -20,17 +20,17 @@ const projects = [
     },
     {
         id: 2,
-        name: "MovieGo",
-        codename: "OPERATION: STOREFRONT",
+        name: "Maqhaa",
+        codename: "PROJECT: BREWMASTER",
         objective:
-            "A React movie app using TMDB API. Browse popular movies, search, view details, and save your favorites. Deployed on Vercel.",
-        tech: ["React.js", "Tailwind CSS", "TMDB API"],
-        difficulty: 4,
-        status: "COMPLETED",
-        xp: 2500,
-        github: "https://github.com/abdelrahman0xff/movie-go",
-        live: "https://movie-go-flame.vercel.app/",
+            "Web and Windowns application for a coffee shop, enabling customers to browse the menu, place orders, and make payments.",
+        tech: ["React.js", "Electron.js", "sqlite3", "Tailwind CSS"],
+        difficulty: 5,
+        status: "IN PROGRESS",
+        xp: 5000,
+        github: "https://github.com/Abdelrahman0xFF/offline-maqhaa",
     },
+
     {
         id: 3,
         name: "SpaceX",
@@ -46,6 +46,19 @@ const projects = [
     },
     {
         id: 4,
+        name: "MovieGo",
+        codename: "OPERATION: STOREFRONT",
+        objective:
+            "A React movie app using TMDB API. Browse popular movies, search, view details, and save your favorites. Deployed on Vercel.",
+        tech: ["React.js", "Tailwind CSS", "TMDB API"],
+        difficulty: 4,
+        status: "COMPLETED",
+        xp: 2500,
+        github: "https://github.com/abdelrahman0xff/movie-go",
+        live: "https://movie-go-flame.vercel.app/",
+    },
+    {
+        id: 5,
         name: "FlavorFinds",
         codename: "PROJECT: TASKMASTER",
         objective:
@@ -58,7 +71,7 @@ const projects = [
         live: "https://abdelrahman0xff.github.io/FlavorFinds/",
     },
     {
-        id: 5,
+        id: 6,
         name: "Portfolio",
         codename: "OPERATION: NEURAL",
         objective:
