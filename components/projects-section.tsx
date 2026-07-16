@@ -14,7 +14,7 @@ const projects = [
         tech: ["React.js", "Tailwind CSS", "Express.js", "SQL Server"],
         difficulty: 5,
         status: "COMPLETED",
-        xp: 4000,
+        xp: 5500,
         github: "https://github.com/Abdelrahman0xFF/nexus-academy",
         live: "https://nexus-academy-ashy.vercel.app/",
     },

@@ -9,13 +9,13 @@ import {
     FaGitAlt,
     FaGithub,
     FaFigma,
+    FaAngular,
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { BiLogoTypescript } from "react-icons/bi";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiExpress, SiMongodb } from "react-icons/si";
 import { DiMsqlServer } from "react-icons/di";
-
 
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -27,13 +27,14 @@ const skills = {
         { name: "JavaScript", color: "#FFD700", hover: "#FFFF33" }, // Neon yellow
         { name: "TypeScript", color: "#3B82F6", hover: "#60A5FA" }, // Vivid sky blue
         { name: "React", color: "#61DAFB", hover: "#A2F0FF" }, // Cyan glow
+        { name: "Angular", color: "#DD0031", hover: "#FF2B57" }, // Angular red
         { name: "Tailwind CSS", color: "#14B8A6", hover: "#4ADE80" }, // Bright teal
     ],
     backend: [
         { name: "Node.js", color: "#39D353", hover: "#6EEB83" }, // Neon green
         { name: "Express", color: "#FFFFFF", hover: "#E0E0E0" }, // White glow
         { name: "MongoDB", color: "#47A248", hover: "#6EEB83" }, // Neon green
-        { name: "SQL Server", color: "#CC292B", hover: "#FF5252" } // Microsoft Red
+        { name: "SQL Server", color: "#CC292B", hover: "#FF5252" }, // Microsoft Red
     ],
     tools: [
         { name: "Git", color: "#E84D31", hover: "#FF8C8C" }, // Bright red
@@ -57,12 +58,15 @@ function TechIcon({ name, color }: { name: string; color: string }) {
             <RiTailwindCssFill className="w-full h-full" style={{ color }} />
         ),
         "Node.js": <FaNodeJs className="w-full h-full" style={{ color }} />,
-        "SQL Server": <DiMsqlServer className="w-full h-full" style={{ color }} />,
+        "SQL Server": (
+            <DiMsqlServer className="w-full h-full" style={{ color }} />
+        ),
         Express: <SiExpress className="w-full h-full" style={{ color }} />,
         MongoDB: <SiMongodb className="w-full h-full" style={{ color }} />,
         Git: <FaGitAlt className="w-full h-full" style={{ color }} />,
         GitHub: <FaGithub className="w-full h-full" style={{ color }} />,
         Figma: <FaFigma className="w-full h-full" style={{ color }} />,
+        "Angular": <FaAngular className="w-full h-full" style={{ color }} />,
     };
 
     return <>{icons[name] ?? null}</>;
