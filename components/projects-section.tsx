@@ -33,7 +33,7 @@ const projects = [
             "Tailwind CSS",
         ],
         difficulty: 5,
-        status: "IN PROGRESS",
+        status: "COMPLETED",
         xp: 5000,
         github: "https://github.com/Abdelrahman0xFF/Maqhaa",
     },

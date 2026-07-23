@@ -13,15 +13,15 @@ import {
 import { cn } from "@/lib/utils";
 
 const navItems = [
-    { id: "projects", label: "Map", sublabel: "Projects", icon: Map },
-    { id: "skills", label: "Stats", sublabel: "Skills", icon: BarChart3 },
+    { id: "about", label: "Character", sublabel: "About Me", icon: User },
+    { id: "skills", label: "Arsenal", sublabel: "Skills", icon: BarChart3 },
+    { id: "experience", label: "Map", sublabel: "Projects", icon: Map },
     {
-        id: "experience",
+        id: "projects",
         label: "Missions",
         sublabel: "Experience",
         icon: Target,
     },
-    { id: "about", label: "Character", sublabel: "About Me", icon: User },
     {
         id: "contact",
         label: "Safe House",

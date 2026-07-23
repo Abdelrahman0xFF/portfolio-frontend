@@ -7,10 +7,26 @@ import { Button } from "@/components/ui/button";
 export function HeroSection() {
     const [isLoaded, setIsLoaded] = useState(false);
     const [typedText, setTypedText] = useState("");
-    const fullText = "Web Developer";
+    const [particles, setParticles] = useState<
+        Array<{ left: string; top: string; delay: string; duration: string; x1: string; y1: string; x2: string; y2: string; x3: string; y3: string }>
+    >([]);
+    const fullText = "Software Engineer";
 
     useEffect(() => {
         setIsLoaded(true);
+        const generated = [...Array(20)].map(() => ({
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+            delay: `${Math.random() * 2}s`,
+            duration: `${2 + Math.random() * 3}s`,
+            x1: `${(Math.random() - 0.5) * 60}px`,
+            y1: `${(Math.random() - 0.5) * 60}px`,
+            x2: `${(Math.random() - 0.5) * 60}px`,
+            y2: `${(Math.random() - 0.5) * 60}px`,
+            x3: `${(Math.random() - 0.5) * 60}px`,
+            y3: `${(Math.random() - 0.5) * 60}px`,
+        }));
+        setParticles(generated);
         let index = 0;
         const interval = setInterval(() => {
             if (index <= fullText.length) {
@@ -25,17 +41,17 @@ export function HeroSection() {
 
     const scrollToContent = () => {
         document
-            .getElementById("projects")
+            .getElementById("about")
             ?.scrollIntoView({ behavior: "smooth" });
     };
 
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative min-h-dvh flex items-center justify-center overflow-hidden">
             {/* Background with animated gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-linear-to from-background via-background to-secondary">
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
                 {/* Animated city silhouette */}
-                <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-background to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-64 bg-linear-to-t from-background to-transparent" />
                 <div
                     className="absolute bottom-0 left-0 right-0 h-48 opacity-20"
                     style={{
@@ -46,16 +62,23 @@ export function HeroSection() {
                 />
                 {/* Floating particles */}
                 <div className="absolute inset-0 overflow-hidden">
-                    {[...Array(20)].map((_, i) => (
+                    {particles.map((p, i) => (
                         <div
                             key={i}
-                            className="absolute w-1 h-1 bg-primary/30 rounded-full animate-pulse"
+                            className="absolute w-1 h-1 bg-primary/30 rounded-full animate-float"
                             style={{
-                                left: `${Math.random() * 100}%`,
-                                top: `${Math.random() * 100}%`,
-                                animationDelay: `${Math.random() * 2}s`,
-                                animationDuration: `${2 + Math.random() * 3}s`,
-                            }}
+                                left: p.left,
+                                top: p.top,
+                                animationDelay: p.delay,
+                                animationDuration: p.duration,
+                                "--float-duration": p.duration,
+                                "--x1": p.x1,
+                                "--y1": p.y1,
+                                "--x2": p.x2,
+                                "--y2": p.y2,
+                                "--x3": p.x3,
+                                "--y3": p.y3,
+                            } as React.CSSProperties}
                         />
                     ))}
                 </div>

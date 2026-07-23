@@ -13,10 +13,10 @@ export function HomeContent() {
         <main className="relative min-h-screen bg-background overflow-x-hidden ">
             <GameNavigation />
             <HeroSection />
-            <ProjectsSection />
+            <AboutSection />
             <SkillsSection />
             <ExperienceSection />
-            <AboutSection />
+            <ProjectsSection />
             <ContactSection />
         </main>
     );
