@@ -230,6 +230,7 @@ export function ProjectsSection() {
                                 <div className="flex items-center gap-2">
                                     <a
                                         href={project.github}
+                                        target="_blank"
                                         className="p-2 text-muted-foreground hover:text-foreground transition-colors"
                                         aria-label="View on GitHub"
                                     >
@@ -237,6 +238,7 @@ export function ProjectsSection() {
                                     </a>
                                     <a
                                         href={project.live}
+                                        target="_blank"
                                         className="p-2 text-muted-foreground hover:text-primary transition-colors"
                                         aria-label="View live demo"
                                     >

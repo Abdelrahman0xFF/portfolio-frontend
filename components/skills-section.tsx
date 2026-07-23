@@ -14,7 +14,7 @@ import {
 import { IoLogoJavascript } from "react-icons/io";
 import { BiLogoTypescript } from "react-icons/bi";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiExpress, SiMongodb } from "react-icons/si";
+import { SiExpress, SiMongodb, SiPostman, SiVercel, SiJsonwebtokens } from "react-icons/si";
 import { DiMsqlServer } from "react-icons/di";
 
 import { useState } from "react";
@@ -35,11 +35,14 @@ const skills = {
         { name: "Express", color: "#FFFFFF", hover: "#E0E0E0" }, // White glow
         { name: "MongoDB", color: "#47A248", hover: "#6EEB83" }, // Neon green
         { name: "SQL Server", color: "#CC292B", hover: "#FF5252" }, // Microsoft Red
+        { name: "JWT", color: "#FF3D00", hover: "#FF6D00" }, // Orange
     ],
     tools: [
         { name: "Git", color: "#E84D31", hover: "#FF8C8C" }, // Bright red
         { name: "GitHub", color: "#FFFFFF", hover: "#E0E0E0" }, // White glow
         { name: "Figma", color: "#FF3B30", hover: "#FF6F61" }, // Bright orange-red
+        { name: "Postman", color: "#FF6C37", hover: "#FF8C5A" }, // Postman orange
+        { name: "Vercel", color: "#FFFFFF", hover: "#E0E0E0" }, // White
     ],
 };
 
@@ -66,7 +69,10 @@ function TechIcon({ name, color }: { name: string; color: string }) {
         Git: <FaGitAlt className="w-full h-full" style={{ color }} />,
         GitHub: <FaGithub className="w-full h-full" style={{ color }} />,
         Figma: <FaFigma className="w-full h-full" style={{ color }} />,
-        "Angular": <FaAngular className="w-full h-full" style={{ color }} />,
+        Angular: <FaAngular className="w-full h-full" style={{ color }} />,
+        Postman: <SiPostman className="w-full h-full" style={{ color }} />,
+        Vercel: <SiVercel className="w-full h-full" style={{ color }} />,
+        JWT: <SiJsonwebtokens className="w-full h-full" style={{ color }} />,
     };
 
     return <>{icons[name] ?? null}</>;
