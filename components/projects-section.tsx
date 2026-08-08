@@ -35,7 +35,8 @@ const projects = [
         difficulty: 5,
         status: "COMPLETED",
         xp: 5000,
-        github: "https://github.com/Abdelrahman0xFF/Maqhaa",
+        github: "https://maqhaa.abdelrahmanashraf.dev/",
+        live: "https://maqhaa.abdelrahmanashraf.dev/",
     },
     {
         id: 3,
