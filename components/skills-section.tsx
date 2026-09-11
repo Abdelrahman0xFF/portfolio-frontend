@@ -14,8 +14,16 @@ import {
 import { IoLogoJavascript } from "react-icons/io";
 import { BiLogoTypescript } from "react-icons/bi";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiExpress, SiMongodb, SiPostman, SiVercel, SiJsonwebtokens } from "react-icons/si";
+import {
+    SiExpress,
+    SiMongodb,
+    SiPostman,
+    SiVercel,
+    SiJsonwebtokens,
+    SiDocker,
+} from "react-icons/si";
 import { DiMsqlServer } from "react-icons/di";
+import { FcLinux } from "react-icons/fc";
 
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -40,9 +48,11 @@ const skills = {
     tools: [
         { name: "Git", color: "#E84D31", hover: "#FF8C8C" }, // Bright red
         { name: "GitHub", color: "#FFFFFF", hover: "#E0E0E0" }, // White glow
-        { name: "Figma", color: "#FF3B30", hover: "#FF6F61" }, // Bright orange-red
+        { name: "Linux", color: "#FCC624", hover: "#FFD700" }, // Linux yellow
+        { name: "Docker", color: "#2496ED", hover: "#57B5FF" }, // Docker blue
         { name: "Postman", color: "#FF6C37", hover: "#FF8C5A" }, // Postman orange
         { name: "Vercel", color: "#FFFFFF", hover: "#E0E0E0" }, // White
+        { name: "Figma", color: "#FF3B30", hover: "#FF6F61" }, // Bright orange-red
     ],
 };
 
@@ -73,6 +83,8 @@ function TechIcon({ name, color }: { name: string; color: string }) {
         Postman: <SiPostman className="w-full h-full" style={{ color }} />,
         Vercel: <SiVercel className="w-full h-full" style={{ color }} />,
         JWT: <SiJsonwebtokens className="w-full h-full" style={{ color }} />,
+        Linux: <FcLinux className="w-full h-full" style={{ color }} />,
+        Docker: <SiDocker className="w-full h-full" style={{ color }} />,
     };
 
     return <>{icons[name] ?? null}</>;
